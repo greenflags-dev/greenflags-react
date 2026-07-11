@@ -1,0 +1,52 @@
+{
+  "name": "@greenflags/react",
+  "version": "0.1.0",
+  "description": "React hooks for GreenFlags feature flags: provider, useFlag and useFlags on top of @greenflags/client. Billing-safe snapshot reads, opt-in polling.",
+  "keywords": [
+    "feature-flags",
+    "greenflags",
+    "react",
+    "hooks"
+  ],
+  "license": "MIT",
+  "homepage": "https://greenflags.dev",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "prepublishOnly": "npm run typecheck && npm run build && npm test"
+  },
+  "peerDependencies": {
+    "@greenflags/client": ">=0.2.0",
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "@greenflags/client": "file:../client",
+    "@testing-library/react": "^16.0.0",
+    "@types/react": "^18.3.0",
+    "jsdom": "^25.0.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greenflags-dev/greenflags-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/greenflags-dev/greenflags-react/issues"
+  }
+}
