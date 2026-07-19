@@ -42,6 +42,7 @@ function createFakeClient(initial: Flag[] = []): FakeClient {
       fake.stopCalls += 1;
     },
     setCoordinates() {},
+    setUser() {},
     emit(flags) {
       snapshot = Object.fromEntries(flags.map((f) => [f.key, f]));
       const copy = { ...snapshot };

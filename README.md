@@ -169,3 +169,13 @@ Semver, while in `0.x`: `MINOR` can include API changes, `PATCH` are fixes. Vers
 - [`greenflags`](https://pub.dev/packages/greenflags) — Dart/Flutter SDK
 - [`@greenflags/mcp`](https://www.npmjs.com/package/@greenflags/mcp) — MCP server for AI agents
 - [API reference](https://greenflags.dev/docs/)
+
+## Percentage rollout & variants
+
+Inherited from `@greenflags/client` (>= 0.5.0): create the client with a user key and the hooks read rollout/variant-evaluated values automatically.
+
+```jsx
+const client = createClient({ url, apiToken, user: currentUser.id });
+// later, e.g. after login:
+client.setUser(newUser.id);
+```

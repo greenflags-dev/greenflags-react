@@ -51,7 +51,7 @@ export function useFlags(): Record<string, Flag> {
 
 /**
  * Escape hatch to the underlying client (e.g. to call `refresh()` manually
- * or `setCoordinates()` for geofenced flags).
+ * or `setCoordinates()` / `setUser()` for geofenced or rollout flags).
  */
 export function useGreenFlagsClient(): GreenFlagsClient {
   return useGreenFlagsContext().client;
